@@ -1,2 +1,2 @@
 # NestedLists
-A List can contain List done using recyclerview.
+Any item on list can contain nested list , demo of nested lists with recyclerview.
