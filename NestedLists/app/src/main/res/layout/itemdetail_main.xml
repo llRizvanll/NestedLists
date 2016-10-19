@@ -1,0 +1,179 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:paddingTop="5dp"
+    android:paddingLeft="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/main_container"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/main_linear1_vert"
+            >
+            <TextView
+                android:id="@+id/restaurant_name"
+                android:text="Bhukkad"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:capitalize="words"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="city"
+                android:paddingTop="5dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:textSize="14dp"
+                android:id="@+id/rest_area_name"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/main_linear1_vert"
+            android:id="@+id/main_linear2_vert"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="area"
+                android:paddingLeft="5dp"
+                android:id="@+id/main_list_item_summary"
+                android:ellipsize="end"
+                android:textSize="15dp"
+                android:singleLine="true"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text=" $$"
+                android:layout_gravity="bottom"
+                android:paddingLeft="5dp"
+                android:id="@+id/costfortwo"
+                android:ellipsize="end"
+                android:textSize="15dp"
+                android:singleLine="true"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text=" $$"
+                android:layout_gravity="bottom"
+                android:paddingLeft="5dp"
+                android:id="@+id/cidName"
+                android:ellipsize="end"
+                android:textSize="15dp"
+                android:singleLine="true"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="right"
+                android:paddingRight="1dp"
+                android:id="@+id/rating"
+                android:layout_gravity="right"
+                android:text="4.1"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/main_linear4_vert"
+            android:layout_toRightOf="@+id/main_linear2_vert"
+            >
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_linear3_vert"
+            android:gravity="right"
+            >
+            <ViewSwitcher
+                android:id="@+id/switcher"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:transitionName="switchertransition"
+                android:inAnimation="@anim/zoom_in"
+                android:layout_gravity="right"
+                android:padding="12dp"
+                android:layout_marginTop="2dp">
+
+
+                <ImageView
+                    android:id="@+id/book_mark_id"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    android:src="@drawable/bookmark_enable"/>
+
+                <ImageView
+                    android:id="@+id/book_mark_filled_id"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    android:src="@drawable/bookmark_disable"/>
+            </ViewSwitcher>
+
+        </LinearLayout>
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--/>-->
+
+    </RelativeLayout>
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/main_container2"
+         android:visibility="gone"
+         android:layout_below="@id/main_container"
+
+         >
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="1+ outlet "
+             android:gravity="center"
+             android:visibility="gone"
+             android:id="@+id/chainOutletView"/>
+             <ListView
+                 android:layout_width="match_parent"
+                 android:id="@+id/item_listview"
+                 android:layout_below="@+id/chainOutletView"
+                 android:layout_marginTop="5dp"
+                 android:visibility="gone"
+                 android:layout_height="100dp">
+
+             </ListView>
+     </RelativeLayout>
+
+</RelativeLayout>
+
+
+    <!--</LinearLayout>-->
